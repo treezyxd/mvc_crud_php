@@ -20,7 +20,9 @@
 
       <tr>
         <td><?= $item->id ?></td>
-        <td><?= $item->nome ?></td>
+        <td>
+          <a href="/pessoa/form?=id<? $item->id ?>"><?= $item->nome ?></a>
+        </td>
         <td><?= $item->cpf ?></td>
         <td><?= $item->data_nascimento ?></td>
       </tr>

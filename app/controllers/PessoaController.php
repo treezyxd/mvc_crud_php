@@ -14,6 +14,12 @@ class PessoaController
 
   public static function form()
   {
+    include 'models/PessoaModel.php';
+
+    $model = new PessoaModel();
+
+    $model = $model->getById((int) $_GET['id']);
+
     include 'views/modules/Pessoa/FormPessoa.php';
   }
 

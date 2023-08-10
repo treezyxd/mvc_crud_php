@@ -23,4 +23,13 @@ class PessoaModel
 
     $this->rows = $dao->select();
   }
+
+  public function getById(int $id)
+  {
+    include 'dao/PessoaDAO.php';
+
+    $dao = new PessoaDAO();
+
+    return $dao->selectById($id);
+  }
 }
